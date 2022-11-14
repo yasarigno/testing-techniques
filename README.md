@@ -58,4 +58,22 @@ print ("---"*15)
 print (addThis(3,5))
 ```
 
+5. ``test_hello.py`` file 
+
+```python
+from hello import addThis
+
+assert addThis(4, 8) == 12
+assert addThis("1",2) == 3
+assert addThis(3,5) == 9        # gives a false error
+```
+
+6. Test it
+
+```bash
+make install
+
+make test
+```
+
 

@@ -1,4 +1,3 @@
-import pytest
 from hello import addThis
 
 def test_addThis():

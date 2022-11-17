@@ -61,11 +61,13 @@ print (addThis(3,5))
 5. ``test_hello.py`` file 
 
 ```python
+import pytest
 from hello import addThis
 
-assert addThis(4, 8) == 12
-assert addThis("1",2) == 3
-assert addThis(3,5) == 8        # gives a false error if you set it != 8
+def test_addThis():
+    assert addThis(4, 8) == 12
+    assert addThis("1",2) == 3
+    assert addThis(3,5) == 8        # gives a false error if you set it != 8
 ```
 
 6. Test it
@@ -76,5 +78,7 @@ make install
 make test
 ```
 
-finito
+7. Set up GitHub Actions to test this application as well. I have chosen a predefined workflow "python application"
+
+[![Python application](https://github.com/yasarigno/testing-techniques/actions/workflows/python-app.yml/badge.svg)](https://github.com/yasarigno/testing-techniques/actions/workflows/python-app.yml)
 
